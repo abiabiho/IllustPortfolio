@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKIHO KANAMARU ONLINE PORTFOLIO</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu">
+            <div class="toggle">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="mask"></div>
+                <div class="gnav-contents">
+                    <nav class="gnav-list">
+                        <ul>
+                            <li><a href="#about">ABOUT</a></li>
+                            <li><a href="#works">WORKS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <div class="mainvisual">
+            <h1>
+                <img src="img/logo.png" alt="logo">
+            </h1>
+            <img src="img/mainvisual.jpg" alt="mv" class="mvimage">
+        </div>
+        <section id="about" class="container">
+            <h2>ABOUT</h2>
+            <div class="about-contents fade-in">
+                <section class="about-text">
+                    <h3>Akiho Kanamaru</h3>
+                    <p>1993年東京生まれ。多摩美術大学情報デザイン学科メディア芸術コース卒。<br>
+                        在学中から趣味でイラスト制作、同人誌制作を行っている。<br>
+                        イラストは静かな雰囲気、同人誌は少し後味の悪い話を中心に制作。<br>
+                        2024年2月から同年4月まで職業訓練校のWebデザイン学科に通っていた。
+                    </p>
+                </section>
+                <section class="skill">
+                    <h3>Skill</h3>
+                    <ul class="skill-icon-list">
+                        <li><img src="img/icon/icon1.png" alt="icon1"></li>
+                        <li><img src="img/icon/icon2.png" alt="icon2"></li>
+                        <li><img src="img/icon/icon3.png" alt="icon3"></li>
+                        <li><img src="img/icon/icon4.png" alt="icon4"></li>
+                        <li><img src="img/icon/icon5.png" alt="icon5"></li>
+                    </ul>
+                    <dl class="skill-date">
+                        <dt>CLIP STUDIO PAINT EX</dt>
+                        <dd>使用歴7年。イラスト、同人誌作成に使用。</dd>
+                        <dt>Photoshop</dt>
+                        <dd>使用歴8年。簡単なレタッチ、文字入れ、切り抜きや加工が可能。</dd>
+                        <dt>Illustrator</dt>
+                        <dd>使用歴1年未満。図形による描写、簡単なロゴの作成が可能。</dd>
+                        <dt>HTML、css</dt>
+                        <dd>使用歴2年。基本的なwebサイトの作成が可能。</dd>
+                    </dl>
+                </section>
+            </div>
+        </section>
+        <section id="works" class="container">
+            <h2>WORKS</h2>
+            <section id="illust" class="fade-in">
+                <h3>Illust</h3>
+                <ul class="illust-list">
+                    <li><a href="illust1.html"><img src="img/img_thumnale/img_thumnale1.jpg" alt="thumnale1"></a></li>
+                    <li><a href="illust2.html"><img src="img/img_thumnale/img_thumnale2.jpg" alt="thumnale2"></a></li>
+                    <li><a href="illust3.html"><img src="img/img_thumnale/img_thumnale3.jpg" alt="thumnale3"></a></li>
+                    <li><a href="illust4.html"><img src="img/img_thumnale/img_thumnale4.jpg" alt="thumnale4"></a></li>
+                    <li><a href="illust5.html"><img src="img/img_thumnale/img_thumnale5.jpg" alt="thumnale5"></a></li>
+                    <li><a href="illust6.html"><img src="img/img_thumnale/img_thumnale6.jpg" alt="thumnale6"></a></li>
+                </ul>
+            </section>
+            <section id="comic" class="fade-in">
+                <h3>Comic</h3>
+                <ul class="comic-list">
+                    <li><a href="comic1.html"><img src="img/img_thumnale/img_thumnale7.jpg" alt="thumnale7"></a></li>
+                    <li><a href="comic2.html"><img src="img/img_thumnale/img_thumnale8.jpg" alt="thumnale8"></a></li>
+                    <li><a href="comic3.html"><img src="img/img_thumnale/img_thumnale9.jpg" alt="thumnale9"></a></li>
+                </ul>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <a class="to-top" href="#"></a>
+        <p class="copyright">&copy; AKIHO KANAMARU</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

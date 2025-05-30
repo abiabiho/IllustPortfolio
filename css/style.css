@@ -1,0 +1,510 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    font-family: "Roboto", "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: #CFCFCF;
+}
+
+img {
+    vertical-align: top;
+    height: auto;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* headerの設定 */
+header {
+    height: 5rem;
+    width: 100%;
+    padding: 2rem 3rem;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.gnav-list {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gnav-list ul {
+    display: flex;
+}
+
+.gnav-list li {
+    margin-left: 2rem;
+}
+
+.gnav-list a {
+    font-size: 1.375rem;
+    font-weight: bold;
+}
+
+.gnav-list a:hover {
+    color: #840C0D;
+}
+
+#menu-btn-check {
+    display: none;
+}
+
+/* MVの設定 */
+.mainvisual {
+    height: 100vh;
+}
+
+.mvimage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    max-width: 100vw;
+    object-fit: cover;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 39vh;
+}
+
+/* mainの設定 */
+.content {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.container {
+    margin: 6rem 5% 8rem 5%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+  
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* aboutの設定 */
+.about-contents {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+
+.about-text,
+.skill {
+    width: 45%;
+}
+
+h3 {
+    font-size: 1.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid #840C0D;
+    margin-bottom: 2rem;
+}
+
+.skill-icon-list {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 1rem;
+}
+
+/* worksの設定 */
+#works a:hover {
+    opacity: 0.7;
+}
+
+.illust-list,
+.comic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.illust-list li,
+.comic-list li {
+    width: calc((100% / 3) - 1.34rem);
+}
+
+.illust-list {
+    margin-bottom: 4rem;
+}
+
+/* footerの設定 */
+footer {
+    padding: 1rem 0;
+    background-color: #333;
+}
+
+footer p {
+    text-align: center;
+    color: #fff;
+    font-size: 0.875rem;
+}
+
+.to-top {
+    width: 4rem;
+    height: 4rem;
+    background-color: #333;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: fixed;
+    right: 2.5rem;
+    bottom: 2.5rem;
+}
+
+.to-top::before {
+    content: "";
+    border-left: 0.5rem solid transparent; 
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid #fff;
+    position: relative;
+    left: 1.5rem;
+    top: 0.5rem;
+}
+
+/* illustの設定 */
+.work-container {
+    padding: 0 2%;
+}
+
+.illust-contents,
+.comic-contents {
+    max-width: 80rem;
+    margin: 5rem auto 6rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.illust-contents img,
+.illust-text,
+.comic-text {
+    width: 45%;
+}
+
+.illust-text,
+.comic-text {
+    line-height: 1.5;
+}
+
+.illust-text dt {
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+}
+
+.illust-text dd {
+    margin-bottom: 2rem;
+}
+
+.back-link {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+.back-link li:first-child {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.back-link li a:hover {
+    opacity: 0.7;
+}
+
+.illust4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 60%;
+}
+
+/* comicの設定 */
+.comic-img-list {
+    width: 50%;
+}
+
+.comic-img-list p {
+    margin-bottom: 1rem;
+}
+
+.pixiv-icon a img {
+    width: 2rem;
+}
+
+@media screen and (max-width:767px) {
+    body {
+        font-size: 0.875rem;
+    }
+
+    header {
+        padding: 1.5rem 1.5rem;
+    }
+
+    /* ハンバーガーボタン */
+    .menu-btn {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 5rem;
+        width: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .menu-btn span {
+        content: "";
+        display: block;
+        height: 0.2rem;
+        width: 2rem;
+        background-color: #333;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    #menu-btn-check:checked ~ .menu-btn span {
+        transform: translateY(11px) rotate(-45deg);
+        background-color: #fff;
+    }
+
+    #menu-btn-check:checked ~ .menu-btn span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-btn-check:checked ~ .menu-btn span:nth-child(3) {
+        transform: translateY(-11px) rotate(45deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .gnav-contents {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: #333;
+        text-align: center;
+        height: 100%;
+        width: 50%;
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+        visibility: hidden;
+    }
+
+    .mask {
+        opacity: 0;
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        transition: 0.5s ease-in-out;
+    }
+
+    #menu-btn-check:checked ~ .mask {
+        opacity: 100;
+        visibility: visible;
+    }
+
+    .gnav-list {
+        justify-content: center;
+    }
+
+    .gnav-list ul {
+        padding: 7rem 0 2rem 0;
+        flex-direction: column;
+    }
+    
+    .gnav-list li {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .gnav-list a {
+        color: #fff;
+        font-weight: bold;
+    }
+
+    #menu-btn-check:checked ~ .gnav-list {
+        background: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100%;
+    }
+
+    #menu-btn-check:checked ~ .gnav-list ul {
+        left: 0;
+    }
+
+    #menu-btn-check:checked ~ .gnav-contents {
+        visibility: visible;
+        opacity: 100;
+    }
+
+    /* mainの設定 */
+    .container {
+        margin: 4rem 5%;
+        padding: 3rem 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* aboutの設定 */
+    .about-contents {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .skill {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        margin-bottom: 2rem;
+    }
+
+    .skill-icon-list {
+        margin-bottom: 1rem;
+    }
+
+    /* worksの設定 */
+    .illust-list,
+    .comic-list {
+        gap: 1rem;
+    }
+
+    .illust-list li,
+    .comic-list li {
+        width: calc((100% / 2) - 0.5rem);
+    }
+
+    .illust-list {
+        margin-bottom: 4rem;
+    }
+
+    /* illustの設定 */
+    .work-container {
+        padding: 0 5%;
+    }
+
+    .illust-contents,
+    .comic-contents {
+        margin: 5rem auto;
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .illust-contents img,
+    .illust-text,
+    .comic-text {
+        width: 100%;
+    }
+
+    .illust-contents img {
+        margin-bottom: 1.5rem;
+    }
+
+    .illust-text dt {
+        font-size: 1rem;
+    }
+
+    .illust-text dd {
+        margin-bottom: 1rem;
+    }
+
+    .illust-text,
+    .comic-text {
+        margin-bottom: 4rem;
+    }
+
+    .back-link {
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .back-link li:first-child {
+        margin-bottom: 0;
+    }
+
+    .back-link li a {
+        font-size: 0.857rem;
+    }
+
+    .back-link li a:hover {
+        opacity: 0.7;
+    }
+
+    .illust4 {
+        width: 100%;
+    }
+
+    /* comicの設定 */
+    .comic-img-list {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .comic-img-list p {
+        margin-bottom: 1rem;
+    }
+
+    .pixiv-icon a img {
+        width: 2rem;
+    }
+}
